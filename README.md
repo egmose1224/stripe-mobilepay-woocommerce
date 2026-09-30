@@ -200,6 +200,13 @@ staging site with WooCommerce:
 - MobilePay isn't offered for orders under 2.50 kr (Stripe's minimum for DKK).
 - The official Stripe plugin must stay installed and connected.
 
+## Contributing
+
+**Pull requests are welcome!** Bug fixes, translations, documentation and new features alike. For a bigger change,
+open an issue first so we can agree on the approach. See [CONTRIBUTING.md](CONTRIBUTING.md) for the details — in
+short: run `php tests/run.php` and `php tests/scenarios.php` before you open the pull request, and cover any change
+to how money moves with a scenario.
+
 ## Trademarks
 
 MobilePay is a trademark of Vipps MobilePay AS. Stripe is a trademark of Stripe, Inc. WooCommerce is a trademark of
