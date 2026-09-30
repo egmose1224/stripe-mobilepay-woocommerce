@@ -1,0 +1,817 @@
+# Stripe MobilePay for WooCommerce — translation template.
+# This file is distributed under the same license as the plugin (0BSD).
+msgid ""
+msgstr ""
+"Project-Id-Version: Stripe MobilePay for WooCommerce 1.0.0\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"X-Domain: stripe-mobilepay-woocommerce\n"
+
+#. Plugin Name of the plugin
+#: stripe-mobilepay-woocommerce.php
+msgid "Stripe MobilePay for WooCommerce"
+msgstr ""
+
+#. Description of the plugin
+#: stripe-mobilepay-woocommerce.php
+msgid "Unofficial MobilePay payment method for WooCommerce on your existing Stripe account (through the official WooCommerce Stripe Payment Gateway): reserved at checkout, captured when the order is completed. Requires the WooCommerce Stripe Payment Gateway plugin by WooCommerce (https://wordpress.org/plugins/woocommerce-gateway-stripe/), connected to your Stripe account: its API keys are used."
+msgstr ""
+
+#: includes/class-smpw-admin.php:29
+msgid "Waiting for the customer"
+msgstr ""
+
+#: includes/class-smpw-admin.php:30
+msgid "Not completed"
+msgstr ""
+
+#: includes/class-smpw-admin.php:31
+msgid "Reserved"
+msgstr ""
+
+#: includes/class-smpw-admin.php:32
+msgid "Captured"
+msgstr ""
+
+#: includes/class-smpw-admin.php:33
+msgid "Canceled/expired"
+msgstr ""
+
+#: includes/class-smpw-admin.php:34
+msgid "Processing"
+msgstr ""
+
+#. translators: %d: MobilePay attempt number
+#: includes/class-smpw-admin.php:41
+#, php-format
+msgid "Attempt %d:"
+msgstr ""
+
+#: includes/class-smpw-admin.php:44
+msgid "(payment)"
+msgstr ""
+
+#: includes/class-smpw-admin.php:48
+msgid "Status in Stripe:"
+msgstr ""
+
+#. translators: %s: amount
+#: includes/class-smpw-admin.php:51
+#, php-format
+msgid "Reserved: %s"
+msgstr ""
+
+#. translators: %s: date and time
+#: includes/class-smpw-admin.php:54
+#, php-format
+msgid "Capture before: %s"
+msgstr ""
+
+#: includes/class-smpw-admin.php:58
+msgid "Nothing captured (released)"
+msgstr ""
+
+#. translators: %s: amount
+#: includes/class-smpw-admin.php:61
+#, php-format
+msgid "Captured: %s"
+msgstr ""
+
+#. translators: %s: amount
+#: includes/class-smpw-admin.php:65
+#, php-format
+msgid "Refunded before capture: %s"
+msgstr ""
+
+#: includes/class-smpw-admin.php:69
+msgid "Sync with Stripe"
+msgstr ""
+
+#: includes/class-smpw-admin.php:75 includes/class-smpw-admin.php:110
+msgid "Access denied."
+msgstr ""
+
+#. translators: 1: PaymentIntent status, 2: result of the refund check
+#: includes/class-smpw-admin.php:81
+#, php-format
+msgid "Synced with Stripe (status: %1$s; refunds: %2$s)."
+msgstr ""
+
+#: includes/class-smpw-admin.php:81 includes/class-smpw-cli.php:68
+msgid "nothing to check"
+msgstr ""
+
+#: includes/class-smpw-admin.php:81 includes/class-smpw-cli.php:68
+msgid "not checked"
+msgstr ""
+
+#. translators: %s: "test mode" or "live mode"
+#: includes/class-smpw-admin.php:92
+#, php-format
+msgid "Webhook in Stripe (%s)"
+msgstr ""
+
+#: includes/class-smpw-admin.php:92
+msgid "test mode"
+msgstr ""
+
+#: includes/class-smpw-admin.php:92
+msgid "live mode"
+msgstr ""
+
+#: includes/class-smpw-admin.php:94
+msgid "No webhook yet."
+msgstr ""
+
+#: includes/class-smpw-admin.php:94
+msgid "Without it, the orders depend on the customer coming back from MobilePay and on the scheduled checks."
+msgstr ""
+
+#. translators: 1: date and time the webhook was created, 2: date and time of the last event from Stripe, or "none yet"
+#: includes/class-smpw-admin.php:101
+#, php-format
+msgid "Created %1$s · last event from Stripe: %2$s"
+msgstr ""
+
+#: includes/class-smpw-admin.php:101
+msgid "none yet"
+msgstr ""
+
+#: includes/class-smpw-admin.php:105
+msgid "Create webhook in Stripe"
+msgstr ""
+
+#: includes/class-smpw-admin.php:105
+msgid "Renew webhook in Stripe"
+msgstr ""
+
+#. translators: %s: the error
+#: includes/class-smpw-admin.php:114
+#, php-format
+msgid "The webhook could not be created: %s"
+msgstr ""
+
+#: includes/class-smpw-admin.php:114
+msgid "The webhook has been created in Stripe."
+msgstr ""
+
+#. translators: 1: <strong>, 2: </strong>
+#: includes/class-smpw-admin.php:139
+#, php-format
+msgid "%1$sMobilePay is switched on, but the Stripe plugin is not connected%2$s — customers cannot choose MobilePay."
+msgstr ""
+
+#. translators: 1: <strong>, 2: </strong>
+#: includes/class-smpw-admin.php:145
+#, php-format
+msgid "%1$sMobilePay is missing its webhook in Stripe.%2$s Create it under WooCommerce → Settings → Payments → MobilePay."
+msgstr ""
+
+#. translators: 1: <strong>, 2: </strong>
+#: includes/class-smpw-admin.php:150
+#, php-format
+msgid "%1$sStripe has not sent any MobilePay events for over 7 days%2$s, although there are new MobilePay orders. Check the webhook in the Stripe dashboard."
+msgstr ""
+
+#. translators: 1: the shop's name, 2: what happened, 3: order number
+#: includes/class-smpw-admin.php:181
+#, php-format
+msgid "[%1$s] %2$s – order #%3$s"
+msgstr ""
+
+#. translators: %s: link to the order in the admin
+#: includes/class-smpw-admin.php:183
+#, php-format
+msgid "Order: %s"
+msgstr ""
+
+#. translators: a short date and time in PHP date() format, e.g. "Oct 6, 2026 21:45"
+#: includes/class-smpw-admin.php:189
+msgid "M j, Y H:i"
+msgstr ""
+
+#: includes/class-smpw-blocks.php:41 includes/class-smpw-gateway.php:14
+msgid "Buy now with MobilePay"
+msgstr ""
+
+#: includes/class-smpw-cli.php:20 includes/class-smpw-cli.php:63
+msgid "The order does not exist."
+msgstr ""
+
+#: includes/class-smpw-cli.php:24
+msgid "nothing captured (released)"
+msgstr ""
+
+#. translators: %s: amount, or "–"
+#: includes/class-smpw-cli.php:27
+#, php-format
+msgid "captured %s"
+msgstr ""
+
+#. translators: 1: order number, 2: order status, 3: payment method, 4: the paying PaymentIntent, 5: the last PaymentIntent status seen, 6: amount reserved, 7: amount captured
+#: includes/class-smpw-cli.php:32
+#, php-format
+msgid "Order #%1$s · %2$s · payment method %3$s · payment %4$s · last seen %5$s · reserved %6$s · %7$s"
+msgstr ""
+
+#. translators: %s: the error
+#: includes/class-smpw-cli.php:45
+#, php-format
+msgid "error: %s"
+msgstr ""
+
+#. translators: 1: attempt number, 2: PaymentIntent ID, 3: "test" or "live", 4: amount, 5: the PaymentIntent's status at Stripe, or the error
+#: includes/class-smpw-cli.php:47
+#, php-format
+msgid "attempt %1$d  %2$s  (%3$s)  %4$s  → %5$s"
+msgstr ""
+
+#. translators: 1: PaymentIntent status, 2: result of the refund check
+#: includes/class-smpw-cli.php:68
+#, php-format
+msgid "%1$s, refunds %2$s"
+msgstr ""
+
+#: includes/class-smpw-cli.php:70
+msgid "not a MobilePay order"
+msgstr ""
+
+#. translators: 1: order number, 2: what the sync found, 3: order status
+#: includes/class-smpw-cli.php:73
+#, php-format
+msgid "Order #%1$s: %2$s → order status %3$s"
+msgstr ""
+
+#: includes/class-smpw-cli.php:81
+msgid "Reconciled."
+msgstr ""
+
+#. translators: 1: "test" or "live", 2: webhook endpoint ID
+#: includes/class-smpw-cli.php:105
+#, php-format
+msgid "Webhook created (%1$s): %2$s"
+msgstr ""
+
+#. translators: 1: "test" or "live", 2: webhook endpoint ID
+#: includes/class-smpw-cli.php:107
+#, php-format
+msgid "Webhook deleted (%1$s): %2$s"
+msgstr ""
+
+#. translators: 1: "test" or "live", 2: webhook endpoint ID, 3: its URL, 4: when it was created, 5: when the last event arrived, 6: whether the signing secret is stored ("ok" or "missing")
+#: includes/class-smpw-cli.php:115
+#, php-format
+msgid "%1$s: %2$s → %3$s · created %4$s · last event %5$s · secret %6$s"
+msgstr ""
+
+#: includes/class-smpw-cli.php:117
+msgid "(none)"
+msgstr ""
+
+#: includes/class-smpw-cli.php:121
+msgid "ok"
+msgstr ""
+
+#: includes/class-smpw-cli.php:121
+msgid "missing"
+msgstr ""
+
+#: includes/class-smpw-gateway.php:10
+msgid "MobilePay through the shop's Stripe account. The amount is reserved when the order is placed and captured when the order is marked Completed. Uses the Stripe plugin's connection and mode (test/live)."
+msgstr ""
+
+#: includes/class-smpw-gateway.php:25
+msgid "You will be sent to MobilePay to approve the payment in the app. The amount is reserved now and only charged when your order is shipped."
+msgstr ""
+
+#: includes/class-smpw-gateway.php:31
+msgid "Enable"
+msgstr ""
+
+#: includes/class-smpw-gateway.php:33
+msgid "Offer MobilePay at checkout"
+msgstr ""
+
+#: includes/class-smpw-gateway.php:37
+msgid "Title at checkout"
+msgstr ""
+
+#: includes/class-smpw-gateway.php:42
+msgid "Description at checkout"
+msgstr ""
+
+#: includes/class-smpw-gateway.php:89
+msgid "Enter an amount to refund."
+msgstr ""
+
+#: includes/class-smpw-payments.php:19
+msgid "MobilePay could not be started right now. Please try again, or choose another payment method."
+msgstr ""
+
+#. translators: 1: the shop's name, 2: order number
+#: includes/class-smpw-payments.php:98
+#, php-format
+msgid "%1$s order #%2$s"
+msgstr ""
+
+#: includes/class-smpw-payments.php:113
+msgid "not a MobilePay payment from this plugin"
+msgstr ""
+
+#: includes/class-smpw-payments.php:116
+msgid "a different order"
+msgstr ""
+
+#: includes/class-smpw-payments.php:119
+msgid "a different website"
+msgstr ""
+
+#: includes/class-smpw-payments.php:122
+msgid "a different amount"
+msgstr ""
+
+#: includes/class-smpw-payments.php:125
+msgid "a different currency"
+msgstr ""
+
+#. translators: 1: MobilePay attempt number, 2: PaymentIntent ID, 3: amount
+#: includes/class-smpw-payments.php:215
+#, php-format
+msgid "MobilePay attempt %1$d (%2$s) was approved, but the order was already paid or cancelled. The extra amount (%3$s) has been refunded."
+msgstr ""
+
+#. translators: 1: MobilePay attempt number, 2: PaymentIntent ID, 3: amount
+#: includes/class-smpw-payments.php:217
+#, php-format
+msgid "MobilePay attempt %1$d (%2$s) was approved, but the order was already paid or cancelled. The extra amount (%3$s) has been released."
+msgstr ""
+
+#. translators: 1: PaymentIntent ID, 2: amount
+#: includes/class-smpw-payments.php:233
+#, php-format
+msgid "The MobilePay hold (%1$s, %2$s) could not be released automatically. Release it in the Stripe dashboard."
+msgstr ""
+
+#. translators: a date and time in PHP date() format, e.g. "October 6, 2026 at 21:45"
+#: includes/class-smpw-payments.php:240
+msgid "F j, Y \\a\\t H:i"
+msgstr ""
+
+#: includes/class-smpw-payments.php:240 includes/class-smpw-payments.php:1514
+msgid "unknown"
+msgstr ""
+
+#: includes/class-smpw-payments.php:261
+msgid "MobilePay could not be started: another process is handling the order right now."
+msgstr ""
+
+#. translators: 1: MobilePay attempt number, 2: PaymentIntent ID
+#: includes/class-smpw-payments.php:287
+#, php-format
+msgid "MobilePay attempt %1$d (%2$s) has been closed because the customer started a new one."
+msgstr ""
+
+#. translators: %s: the error
+#: includes/class-smpw-payments.php:301
+#, php-format
+msgid "MobilePay could not be started: %s"
+msgstr ""
+
+#: includes/class-smpw-payments.php:301
+msgid "no answer from Stripe"
+msgstr ""
+
+#. translators: 1: MobilePay attempt number, 2: PaymentIntent ID, 3: amount
+#: includes/class-smpw-payments.php:313
+#, php-format
+msgid "MobilePay started (attempt %1$d, %2$s): %3$s will be reserved when the customer approves in the app (within 5 minutes)."
+msgstr ""
+
+#. translators: 1: PaymentIntent status, 2: MobilePay attempt number, 3: PaymentIntent ID
+#: includes/class-smpw-payments.php:323
+#, php-format
+msgid "MobilePay could not be started: Stripe answered \"%1$s\" to attempt %2$d (%3$s) without sending the customer on to MobilePay."
+msgstr ""
+
+#: includes/class-smpw-payments.php:345
+msgid "The customer is paying the order again with MobilePay. The order status will change once the payment is approved."
+msgstr ""
+
+#: includes/class-smpw-payments.php:349
+msgid "not an attempt of this order"
+msgstr ""
+
+#. translators: 1: PaymentIntent ID, 2: the error
+#: includes/class-smpw-payments.php:352
+#, php-format
+msgid "MobilePay could not be started: the first MobilePay payment (%1$s) could not be checked with Stripe (%2$s)."
+msgstr ""
+
+#. translators: 1: PaymentIntent ID, 2: amount, 3: date and time the hold expires
+#: includes/class-smpw-payments.php:357
+#, php-format
+msgid "The customer tried to pay again with MobilePay, but the first hold (%1$s, %2$s) is still active until %3$s. Mark the order Completed to capture it."
+msgstr ""
+
+#. translators: 1: PaymentIntent ID, 2: amount
+#: includes/class-smpw-payments.php:366
+#, php-format
+msgid "The customer tried to pay again with MobilePay, but the first payment (%1$s, %2$s) has already been captured in Stripe. Correct the order status — no new payment was accepted."
+msgstr ""
+
+#. translators: %s: PaymentIntent ID
+#: includes/class-smpw-payments.php:372
+#, php-format
+msgid "The MobilePay hold (%s) no longer exists, so the customer is paying the order again with MobilePay. The order status will change once the new payment is approved."
+msgstr ""
+
+#. translators: 1: PaymentIntent ID, 2: why it doesn't match
+#: includes/class-smpw-payments.php:445
+#, php-format
+msgid "MobilePay: the payment %1$s does not match the order (%2$s) and has been ignored."
+msgstr ""
+
+#: includes/class-smpw-payments.php:519 includes/class-smpw-payments.php:851
+msgid "The MobilePay hold could not be released"
+msgstr ""
+
+#: includes/class-smpw-payments.php:527
+msgid "The order was cancelled"
+msgstr ""
+
+#. translators: 1: MobilePay attempt number, 2: PaymentIntent ID
+#: includes/class-smpw-payments.php:534
+#, php-format
+msgid "The MobilePay payment was not completed (attempt %1$d, %2$s — declined, abandoned or not approved within 5 minutes). The order is awaiting payment; the customer can try again."
+msgstr ""
+
+#. translators: 1: PaymentIntent ID, 2: amount
+#: includes/class-smpw-payments.php:545
+#, php-format
+msgid "The MobilePay hold (%1$s, %2$s) has been released because the order was refunded."
+msgstr ""
+
+#. translators: 1: PaymentIntent ID, 2: amount
+#: includes/class-smpw-payments.php:547
+#, php-format
+msgid "The MobilePay hold (%1$s, %2$s) has been released because the order was cancelled."
+msgstr ""
+
+#. translators: %s: PaymentIntent ID
+#: includes/class-smpw-payments.php:553
+#, php-format
+msgid "The MobilePay hold (%s) no longer exists — it has expired or been canceled in Stripe. The amount cannot be captured; contact the customer about payment before the order is shipped."
+msgstr ""
+
+#. translators: 1: PaymentIntent ID, 2: amount, 3: date and time the hold expires
+#: includes/class-smpw-payments.php:557
+#, php-format
+msgid "The order is marked Failed, but the MobilePay hold (%1$s, %2$s) is still active until %3$s. Mark the order Completed again to capture the amount."
+msgstr ""
+
+#: includes/class-smpw-payments.php:561 includes/class-smpw-payments.php:588
+msgid "MobilePay needs attention"
+msgstr ""
+
+#. translators: 1: amount, 2: PaymentIntent ID, 3: date and time the hold expires
+#: includes/class-smpw-payments.php:597
+#, php-format
+msgid "The payment has been reserved via MobilePay (%1$s, %2$s) and will be captured when the order is marked Completed (shipped). The hold expires on %3$s."
+msgstr ""
+
+#. translators: 1: amount, 2: PaymentIntent ID, 3: Stripe's error message
+#: includes/class-smpw-payments.php:675
+#, php-format
+msgid "A duplicate MobilePay amount (%1$s, %2$s) could not be refunded automatically: %3$s. Refund it in the Stripe dashboard."
+msgstr ""
+
+#: includes/class-smpw-payments.php:677
+msgid "A duplicate MobilePay payment must be refunded"
+msgstr ""
+
+#: includes/class-smpw-payments.php:773
+msgid "There is no MobilePay hold to capture on this order."
+msgstr ""
+
+#. translators: 1: PaymentIntent ID, 2: PaymentIntent status
+#: includes/class-smpw-payments.php:818
+#, php-format
+msgid "The MobilePay payment %1$s has not been approved (status: %2$s) — there is nothing to capture."
+msgstr ""
+
+#. translators: 1: PaymentIntent ID, 2: amount
+#: includes/class-smpw-payments.php:849
+#, php-format
+msgid "There is nothing to capture — the full amount was refunded before shipping — but the MobilePay hold (%1$s, %2$s) could not be released automatically. The next automatic check will try to release it again; otherwise release it in the Stripe dashboard."
+msgstr ""
+
+#. translators: 1: PaymentIntent ID, 2: amount
+#: includes/class-smpw-payments.php:859
+#, php-format
+msgid "There is nothing to capture — the full amount was refunded before shipping. The MobilePay hold (%1$s, %2$s) has been released."
+msgstr ""
+
+#: includes/class-smpw-payments.php:874
+msgid "the hold has expired or been canceled in Stripe"
+msgstr ""
+
+#. translators: %s: PaymentIntent ID
+#: includes/class-smpw-payments.php:881
+#, php-format
+msgid "There is nothing to capture — the full amount has been refunded, and the MobilePay hold (%s) has already been released. Nothing was captured via MobilePay."
+msgstr ""
+
+#. translators: 1: amount, 2: PaymentIntent ID
+#: includes/class-smpw-payments.php:900
+#, php-format
+msgid "%1$s has been captured via MobilePay (%2$s)."
+msgstr ""
+
+#. translators: %s: amount
+#: includes/class-smpw-payments.php:903
+#, php-format
+msgid "The rest of the hold (%s) has been released."
+msgstr ""
+
+#. translators: %s: the error
+#: includes/class-smpw-payments.php:933
+#, php-format
+msgid "The MobilePay amount could not be captured right now (%s). It will be tried again automatically in 5 minutes, and then after 30 minutes and 2 hours; if that doesn't work, the order is set to Failed."
+msgstr ""
+
+#. translators: %s: why the amount couldn't be captured
+#: includes/class-smpw-payments.php:1009
+#, php-format
+msgid "The amount could not be captured via MobilePay: %s. The order has been set to Failed — contact the customer about payment."
+msgstr ""
+
+#. translators: 1: why the amount couldn't be captured, 2: PaymentIntent ID, 3: amount, 4: date and time the hold expires
+#: includes/class-smpw-payments.php:1015
+#, php-format
+msgid "The amount could not be captured via MobilePay: %1$s. The MobilePay hold (%2$s, %3$s) is still active until %4$s: mark the order Completed again to capture the amount — now or later, before the hold expires. The order has been set to Failed."
+msgstr ""
+
+#: includes/class-smpw-payments.php:1018
+msgid "The MobilePay amount could not be captured"
+msgstr ""
+
+#. translators: 1: amount, 2: the error
+#: includes/class-smpw-payments.php:1066
+#, php-format
+msgid "The order is cancelled, but the MobilePay amount (%1$s) could not be refunded automatically: %2$s. Refund it in WooCommerce or in Stripe."
+msgstr ""
+
+#: includes/class-smpw-payments.php:1068 includes/class-smpw-payments.php:1399
+msgid "A MobilePay refund failed"
+msgstr ""
+
+#. translators: 1: WooCommerce refund ID, 2: that refund's amount, 3: the amount asked for
+#: includes/class-smpw-payments.php:1108
+#, php-format
+msgid "Nothing has been refunded: the refund could not be recognized — the newest refund (#%1$d) is for %2$s, not %3$s. Two refunds at the same time? Check the order and try again."
+msgstr ""
+
+#: includes/class-smpw-payments.php:1130
+msgid "The amount must be greater than 0."
+msgstr ""
+
+#: includes/class-smpw-payments.php:1133
+msgid "The order is being processed right now — please try again in a moment."
+msgstr ""
+
+#: includes/class-smpw-payments.php:1141
+msgid "The order has no MobilePay payment to refund."
+msgstr ""
+
+#. translators: 1: WooCommerce refund ID, 2: Stripe refund ID
+#: includes/class-smpw-payments.php:1151
+#, php-format
+msgid "Nothing has been refunded: refund #%1$d has already been sent to Stripe (%2$s) — two refunds at the same time? Check the order and try again."
+msgstr ""
+
+#. translators: 1: amount, 2: PaymentIntent ID
+#: includes/class-smpw-payments.php:1157
+#, php-format
+msgid "%1$s has been booked as refunded. Nothing was captured via MobilePay (the hold %2$s has been released), so nothing is sent back."
+msgstr ""
+
+#. translators: 1: amount, 2: PaymentIntent ID
+#: includes/class-smpw-payments.php:1164
+#, php-format
+msgid "%1$s is not sent back via MobilePay: the refund had already been deducted when the amount was captured (%2$s)."
+msgstr ""
+
+#. translators: 1: PaymentIntent ID, 2: the error
+#: includes/class-smpw-payments.php:1170
+#, php-format
+msgid "The MobilePay payment (%1$s) could not be checked with Stripe, so nothing has been refunded: %2$s"
+msgstr ""
+
+#. translators: 1: PaymentIntent ID, 2: PaymentIntent status
+#: includes/class-smpw-payments.php:1212
+#, php-format
+msgid "The MobilePay payment (%1$s) has the status \"%2$s\" in Stripe — there is nothing to refund."
+msgstr ""
+
+#. translators: %s: amount
+#: includes/class-smpw-payments.php:1217
+#, php-format
+msgid "At most %s can be refunded via MobilePay on this order."
+msgstr ""
+
+#. translators: 1: amount, 2: Stripe refund ID
+#: includes/class-smpw-payments.php:1225
+#, php-format
+msgid "Stripe has already refunded %1$s (%2$s) in an earlier attempt, but that refund has not been booked here yet (that happens when Stripe reports it, or with \"Sync with Stripe\" in the MobilePay box). Do not refund again now — check the payment in the Stripe dashboard."
+msgstr ""
+
+#. translators: %s: Stripe's error message
+#: includes/class-smpw-payments.php:1250
+#, php-format
+msgid "Stripe rejected the refund: %s"
+msgstr ""
+
+#. translators: 1: Stripe refund ID, 2: refund status
+#: includes/class-smpw-payments.php:1257
+#, php-format
+msgid "Stripe could not complete the refund (%1$s, status: %2$s)."
+msgstr ""
+
+#. translators: 1: amount, 2: Stripe refund ID, 3: " — " and the refund's reason, or nothing
+#: includes/class-smpw-payments.php:1270
+#, php-format
+msgid "%1$s has been refunded via MobilePay (%2$s)%3$s."
+msgstr ""
+
+#. translators: 1: amount, 2: Stripe refund ID, 3: " — " and the refund's reason, or nothing, 4: refund status
+#: includes/class-smpw-payments.php:1272
+#, php-format
+msgid "%1$s has been sent for refund via MobilePay (%2$s)%3$s. Stripe is still processing it (status: %4$s); if it fails, a note will appear here."
+msgstr ""
+
+#. translators: 1: amount, 2: PaymentIntent ID, 3: PaymentIntent status
+#: includes/class-smpw-payments.php:1328
+#, php-format
+msgid "%1$s has been booked as refunded. The MobilePay payment (%2$s) has no active hold (status: %3$s), so there is nothing to release or send back."
+msgstr ""
+
+#. translators: 1: amount refunded, 2: the most that will be captured
+#: includes/class-smpw-payments.php:1337
+#, php-format
+msgid "%1$s will not be captured (refunded before shipping). When the order is marked Completed, at most %2$s will be captured; the rest of the hold will be released."
+msgstr ""
+
+#. translators: %s: PaymentIntent ID
+#: includes/class-smpw-payments.php:1342
+#, php-format
+msgid "The MobilePay hold (%s) could not be released in Stripe, so the refund has not been made. Please try again shortly."
+msgstr ""
+
+#. translators: 1: PaymentIntent ID, 2: amount
+#: includes/class-smpw-payments.php:1347
+#, php-format
+msgid "The full amount was refunded before it was captured — the MobilePay hold (%1$s, %2$s) has been released."
+msgstr ""
+
+#. translators: 1: Stripe refund ID, 2: amount
+#: includes/class-smpw-payments.php:1394
+#, php-format
+msgid "The MobilePay refund %1$s (%2$s) has failed in Stripe — the money has not been sent back. Check the payment in the Stripe dashboard."
+msgstr ""
+
+#. translators: 1: Stripe refund ID, 2: amount
+#: includes/class-smpw-payments.php:1396
+#, php-format
+msgid "The MobilePay refund %1$s (%2$s) has been canceled in Stripe — the money has not been sent back. Check the payment in the Stripe dashboard."
+msgstr ""
+
+#. translators: 1: Stripe refund ID, 2: amount, 3: what the order has left to refund
+#: includes/class-smpw-payments.php:1415
+#, php-format
+msgid "A refund in Stripe (%1$s, %2$s) cannot be booked here: the order only has %3$s left to refund. Check the order and the payment in the Stripe dashboard."
+msgstr ""
+
+#: includes/class-smpw-payments.php:1417 includes/class-smpw-payments.php:1441
+msgid "A MobilePay refund could not be booked"
+msgstr ""
+
+#. translators: %s: Stripe refund ID
+#: includes/class-smpw-payments.php:1426
+#, php-format
+msgid "Refunded in Stripe (%s)"
+msgstr ""
+
+#. translators: 1: Stripe refund ID, 2: amount, 3: the error
+#: includes/class-smpw-payments.php:1439
+#, php-format
+msgid "A refund in Stripe (%1$s, %2$s) could not be booked here right now: %3$s. It will be tried again automatically."
+msgstr ""
+
+#. translators: 1: amount, 2: Stripe refund ID
+#: includes/class-smpw-payments.php:1450
+#, php-format
+msgid "%1$s has been refunded in Stripe (%2$s) and booked as a refund here."
+msgstr ""
+
+#. translators: 1: amount, 2: Stripe refund ID
+#: includes/class-smpw-payments.php:1452
+#, php-format
+msgid "%1$s has been refunded via MobilePay (%2$s), but the refund did not exist here (Stripe's answer got lost, or it was deleted) — now it has been booked."
+msgstr ""
+
+#. translators: %s: Stripe dispute ID
+#: includes/class-smpw-payments.php:1505
+#, php-format
+msgid "The dispute over the MobilePay payment (%s) has been decided: won — the money stays with the shop."
+msgstr ""
+
+#. translators: %s: Stripe dispute ID
+#: includes/class-smpw-payments.php:1508
+#, php-format
+msgid "The dispute over the MobilePay payment (%s) has been decided: lost — the amount has been returned to the customer."
+msgstr ""
+
+#. translators: %s: Stripe dispute ID
+#: includes/class-smpw-payments.php:1511
+#, php-format
+msgid "The dispute over the MobilePay payment (%s) has been decided: closed."
+msgstr ""
+
+#. translators: 1: Stripe dispute ID, 2: amount, 3: the reason Stripe gives
+#: includes/class-smpw-payments.php:1514
+#, php-format
+msgid "The customer has disputed the MobilePay payment (%1$s, %2$s, reason: %3$s). Respond in the Stripe dashboard before the deadline."
+msgstr ""
+
+#: includes/class-smpw-payments.php:1518
+msgid "A MobilePay payment has been disputed"
+msgstr ""
+
+#. translators: 1: PaymentIntent ID, 2: amount
+#: includes/class-smpw-payments.php:1561
+#, php-format
+msgid "The customer paid with another payment method, but also approved MobilePay (%1$s). The MobilePay hold (%2$s) has been released."
+msgstr ""
+
+#. translators: 1: PaymentIntent ID, 2: amount
+#: includes/class-smpw-payments.php:1566
+#, php-format
+msgid "The customer paid with another payment method, but the MobilePay hold (%1$s, %2$s) could not be released automatically. Release it in the Stripe dashboard."
+msgstr ""
+
+#: includes/class-smpw-payments.php:1568
+msgid "An extra MobilePay payment could not be released"
+msgstr ""
+
+#. translators: 1: PaymentIntent ID, 2: amount
+#: includes/class-smpw-payments.php:1577
+#, php-format
+msgid "The customer paid with another payment method, but the MobilePay amount (%1$s, %2$s) was captured too — it has been refunded."
+msgstr ""
+
+#: includes/class-smpw-payments.php:1585
+msgid "An extra MobilePay payment was released"
+msgstr ""
+
+#: includes/class-smpw-return.php:15
+msgid "The MobilePay payment was not completed. Please try again, or choose another payment method."
+msgstr ""
+
+#: includes/class-smpw-return.php:20
+msgid "We are still waiting for an answer from MobilePay. If you have approved the payment, your order will go through by itself, and you will receive an order confirmation by e-mail."
+msgstr ""
+
+#. translators: %s: the shop's name
+#: includes/class-smpw-return.php:156
+#, php-format
+msgid "Waiting for MobilePay – %s"
+msgstr ""
+
+#: includes/class-smpw-return.php:157
+msgid "Waiting for an answer from MobilePay …"
+msgstr ""
+
+#: includes/class-smpw-return.php:157
+msgid "This page refreshes by itself. Please don't close it — we'll send you on as soon as the payment is confirmed."
+msgstr ""
+
+#: includes/class-smpw-return.php:157
+msgid "Refresh now"
+msgstr ""
+
+#. translators: %s: "test" or "live"
+#: includes/class-smpw-stripe.php:73
+#, php-format
+msgid "Stripe is not connected in %s mode."
+msgstr ""
+
+#. translators: %d: HTTP status code
+#: includes/class-smpw-stripe.php:132
+#, php-format
+msgid "Stripe returned HTTP %d"
+msgstr ""
+
+#: includes/class-smpw-webhook.php:143
+msgid "Stripe answered without a webhook ID or signing secret."
+msgstr ""

@@ -1,0 +1,7 @@
+* text=auto eol=lf
+*.mo binary
+
+/tests export-ignore
+/.github export-ignore
+/.gitattributes export-ignore
+/.gitignore export-ignore

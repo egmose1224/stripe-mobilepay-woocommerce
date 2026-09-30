@@ -1,0 +1,16 @@
+/* MobilePay in the checkout block. */
+.smpw-label {
+	display: inline-flex;
+	align-items: center;
+	min-height: 24px;
+}
+
+.smpw-logo {
+	display: block;
+	height: 20px;
+	width: auto;
+}
+
+.smpw-description {
+	margin: 0;
+}
