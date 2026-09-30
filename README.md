@@ -9,6 +9,12 @@ time it calls Stripe, it reads the secret key for the current mode (test or live
 
 > **Unofficial** — not affiliated with or endorsed by Stripe, Vipps MobilePay or WooCommerce/Automattic.
 
+> **Provided "as is", without warranty of any kind.** This is payment software, and you use it entirely at your own
+> risk. The authors and contributors accept no liability for any loss or damage arising from its use — including
+> failed, missing, duplicated or incorrect payments, captures or refunds, lost revenue, fees or chargebacks. Test it
+> thoroughly in Stripe's test mode before you take real payments, and keep an eye on your orders and your Stripe
+> dashboard.
+
 Used in production at [vooma.dk](https://vooma.dk).
 
 ## Why
@@ -202,5 +208,9 @@ affiliated with or endorsed by Stripe, Vipps MobilePay or WooCommerce/Automattic
 
 ## License
 
-[0BSD](LICENSE): use, copy, modify and distribute it for any purpose, with or without fee or attribution. It comes with
-no warranty.
+[0BSD](LICENSE): use, copy, modify and distribute it for any purpose, with or without fee or attribution.
+
+The software is provided **"as is"**, without warranty of any kind, express or implied, including the implied
+warranties of merchantability and fitness for a particular purpose. In no event shall the authors or contributors be
+liable for any claim, damages or other liability arising from, out of or in connection with the software or its use —
+see [LICENSE](LICENSE).
